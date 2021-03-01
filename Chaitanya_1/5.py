@@ -12,12 +12,3 @@ def prime_or_not(a):
 a1=int(input("enter a number:"))
 prime_or_not(a1)
 
-"""
-def prim(a):
-      if (a%1==0) and  (a%a==0) and  (a%2 !=0):
-            print("thie is even number:")
-      else:
-            print("not even:")
-prim(7)"""
-      
-                  

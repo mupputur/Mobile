@@ -4,6 +4,6 @@ def fibonacci(x=0,y=1):
             if z>100:
                   break
             print(z)
-            x=y
-            y=z
+            x = y
+            y = z
 fibonacci()

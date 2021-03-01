@@ -7,6 +7,6 @@ def perfect_number(a):
             print("this is perfect number:")
       else:
             print("this is not perfect number:")
-x=int(input("enter a number:"))
+x = int(input("enter a number:"))
 perfect_number(x)
                   
