@@ -1,0 +1,37 @@
+adb devices
+adb install file.apk
+adb reboot
+adb uninstall file.apk
+adb get-state
+adb get-serialno
+adb shell screenrecord /sdcard/movie.mp4
+adb shell screencap /sdcard/screenshot.png
+adb shell am start -a andriod.media.action.STILL_IMAGE_CAMERA
+adb shell input keyevent 27
+adb shell pm list packages -u
+adb shell pm list packages -e
+adb shell pm list packages -d
+adb shell pm list packages -3
+adb shell pm list packages -s
+adb shell pm list packages
+adb shell pm list packages python
+adb shell wm density
+adb shell dumpsys >Desktop/dumpsys.txt
+adb shell dumpsys | less
+adb shell dumpsys batterystats
+adb shell dumpsys window windows | grep -i focus
+adb shell ps
+adb shell ps | grep python
+adb shell kill -9 pid
+adb shell ip addr show or adb shell netcfg
+adb shell route
+adb shell getprop
+adb shell getprop | grep hostname
+adb backup -apk -shared -f Desktop/file_backup.ab
+adb restore Desktop/file_backup.ab
+#adb reboot bootloader
+fastboot devices
+fastboot oem unlock
+
+
+
