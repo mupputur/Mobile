@@ -1,23 +1,21 @@
-import os
+#Install .apk file into connected adb device 
 import subprocess
-def install_apk(apk_path):
-    try:
-        apk=apk_path.endswith(".apk")
-        if apk==True:
-            pass
+
+def m_install_apk(apk_file_path):
+    if apk_file_path.endswith('.apk'):
+        cmd='adb install'+' '+ apk_file_path
+        res = subprocess.getoutput(cmd)
+        if res.split()[-1]=='Success':
+            return True
         else:
-            raise Exception
-    except Exception:
-          return "Please provide .apk file extention"
-    cmd='adb install'+' '+ apk_path
-    res = subprocess.getoutput(cmd)
-    if res.split()[-1]=='Success':
-        return True
+            return False
     else:
-        return False
+        raise Exception("Please provide .apk file")
+
 if __name__=="__main__":
-    path='C:\\Andriod\\platform-tools\\cal.apk'
-    print(install_apk(path))
+    apk_file_path='C:\\Andriod\\platform-tools\\cal.apk'
+    print(m_install_apk(apk_file_path))
+    
     
     
         

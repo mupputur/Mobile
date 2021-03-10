@@ -1,24 +1,18 @@
+#uninstall app or application in the device using adb command line
 import subprocess
-import os
-def uninstall_pakage(pkg_name):
-    try:
-        if pkg_name.startswith('com')or pkg_name.endswith('com'):
-            pass
-        else:
-            raise Exception
-    except Exception:
-        return 'Please provide valid pakage'
+
+def m_uninstall_pak(pkg_name):
     cmd='adb uninstall'+' '+ pkg_name
     res = subprocess.getoutput(cmd)
     if res.split()[-1]=='Success':
         return True
     else:
-        return False
+        raise Exception("Please provide valid pakage name")
+
 if __name__=="__main__":
     pkg_name='com.bak.mnr.calculatrice'
-    print(uninstall_pakage(pkg_name))
-    #innovationlabs.python.com
-    
+    print(m_uninstall_pak(pkg_name))
+        
     
 
 
